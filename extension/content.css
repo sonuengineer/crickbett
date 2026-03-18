@@ -1,0 +1,434 @@
+/* CricketArb Extension Styles */
+
+#cricketarb-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 380px;
+  max-height: 520px;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  overflow: hidden;
+  border: 1px solid #16213e;
+}
+
+/* Header */
+.cab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #16213e;
+  cursor: grab;
+  user-select: none;
+}
+
+.cab-logo {
+  font-weight: 700;
+  font-size: 14px;
+  color: #00d4aa;
+  letter-spacing: 0.5px;
+}
+
+.cab-header-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.cab-header-btns button {
+  background: #0f3460;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.cab-header-btns button:hover {
+  background: #1a4a8a;
+}
+
+.cab-header-btns button.cab-active {
+  background: #00d4aa;
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+/* Body */
+.cab-body {
+  padding: 12px;
+  overflow-y: auto;
+  max-height: 420px;
+}
+
+/* Match info inputs */
+.cab-match-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.cab-match-info input,
+.cab-match-info select {
+  flex: 1;
+  min-width: 100px;
+  background: #0f3460;
+  color: #e0e0e0;
+  border: 1px solid #16213e;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 12px;
+  outline: none;
+}
+
+.cab-match-info input:focus,
+.cab-match-info select:focus {
+  border-color: #00d4aa;
+}
+
+.cab-match-info input::placeholder {
+  color: #666;
+}
+
+.cab-vs {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 11px;
+  padding: 0 2px;
+}
+
+/* Odds list */
+.cab-odds-list {
+  margin-bottom: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.cab-hint {
+  color: #666;
+  font-size: 11px;
+  text-align: center;
+  padding: 8px;
+  margin: 0;
+}
+
+.cab-odds-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background: #0f3460;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.cab-odds-selection {
+  flex: 1;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.cab-odds-value {
+  color: #00d4aa;
+  font-weight: 600;
+  margin: 0 8px;
+}
+
+.cab-odds-value small {
+  color: #666;
+  font-weight: 400;
+}
+
+.cab-remove {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Manual entry */
+.cab-manual-entry {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cab-manual-entry input[type="text"] {
+  flex: 1;
+  min-width: 80px;
+  background: #0f3460;
+  color: #e0e0e0;
+  border: 1px solid #16213e;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 12px;
+  outline: none;
+}
+
+.cab-manual-entry input[type="text"]:focus {
+  border-color: #00d4aa;
+}
+
+.cab-manual-entry input::placeholder {
+  color: #666;
+}
+
+.cab-manual-entry label {
+  font-size: 11px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+#cab-add-odds {
+  background: #0f3460;
+  color: #00d4aa;
+  border: 1px solid #00d4aa;
+  border-radius: 6px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#cab-add-odds:hover {
+  background: #00d4aa;
+  color: #1a1a2e;
+}
+
+/* Action buttons */
+.cab-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.cab-btn-send {
+  flex: 1;
+  background: #00d4aa;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.cab-btn-send:hover:not(:disabled) {
+  background: #00e6b8;
+}
+
+.cab-btn-send:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.cab-btn-clear {
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.cab-btn-clear:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+/* Status bar */
+.cab-status {
+  margin-top: 8px;
+  padding: 0;
+  font-size: 11px;
+  min-height: 16px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.cab-status-success {
+  color: #00d4aa;
+}
+
+.cab-status-error {
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  padding: 6px;
+}
+
+.cab-status-info {
+  color: #3498db;
+}
+
+.cab-status-arb {
+  color: #f39c12;
+  font-weight: 700;
+  background: rgba(243, 156, 18, 0.1);
+  padding: 6px;
+  animation: cab-pulse 1s ease-in-out infinite;
+}
+
+@keyframes cab-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ---- Auto-capture section ---- */
+
+.cab-auto-section {
+  margin-bottom: 10px;
+  padding: 8px;
+  background: rgba(0, 212, 170, 0.05);
+  border: 1px solid #16213e;
+  border-radius: 6px;
+}
+
+.cab-auto-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.cab-auto-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.cab-auto-indicator.idle {
+  background: #666;
+}
+
+.cab-auto-indicator.active {
+  background: #00d4aa;
+  animation: cab-pulse 1.5s ease-in-out infinite;
+}
+
+.cab-auto-indicator.scanning {
+  background: #f39c12;
+  animation: cab-pulse 0.8s ease-in-out infinite;
+}
+
+.cab-auto-indicator.error {
+  background: #e74c3c;
+}
+
+.cab-auto-indicator.sending {
+  background: #3498db;
+  animation: cab-pulse 0.5s ease-in-out infinite;
+}
+
+#cab-auto-status-text {
+  flex: 1;
+  font-size: 11px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#cab-scan-interval {
+  background: #0f3460;
+  color: #e0e0e0;
+  border: 1px solid #16213e;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+#cab-scan-interval:focus {
+  border-color: #00d4aa;
+}
+
+.cab-auto-stats {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 4px 0;
+  border-top: 1px solid #16213e;
+  margin-top: 4px;
+}
+
+.cab-auto-odds {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-top: 6px;
+}
+
+.cab-auto-odds-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 6px;
+  background: rgba(15, 52, 96, 0.5);
+  border-radius: 3px;
+  margin-bottom: 2px;
+  font-size: 11px;
+}
+
+.cab-auto-odds-item .selection {
+  color: #e0e0e0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cab-auto-odds-item .value {
+  color: #00d4aa;
+  font-weight: 600;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+/* Auto button active state */
+#cab-auto-capture.cab-active {
+  background: #00d4aa;
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+/* Selection mode cursor */
+body.cricketarb-selecting {
+  cursor: crosshair !important;
+}
+
+body.cricketarb-selecting *:hover:not(#cricketarb-panel):not(#cricketarb-panel *) {
+  outline: 2px solid #00d4aa !important;
+  outline-offset: 2px;
+  cursor: crosshair !important;
+}
+
+/* Captured element highlight */
+.cab-captured {
+  background-color: rgba(0, 212, 170, 0.2) !important;
+  outline: 2px solid #00d4aa !important;
+  border-radius: 3px;
+}

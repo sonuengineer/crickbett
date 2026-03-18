@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 320px;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 13px;
+      padding: 16px;
+    }
+    h2 { color: #00d4aa; font-size: 16px; margin-bottom: 12px; }
+    .section { margin-bottom: 14px; }
+    label { display: block; color: #999; font-size: 11px; margin-bottom: 4px; }
+    input {
+      width: 100%;
+      background: #0f3460;
+      color: #e0e0e0;
+      border: 1px solid #16213e;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 12px;
+      outline: none;
+    }
+    input:focus { border-color: #00d4aa; }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    .btn-primary { background: #00d4aa; color: #1a1a2e; }
+    .btn-primary:hover { background: #00e6b8; }
+    .btn-secondary { background: #0f3460; color: #00d4aa; border: 1px solid #00d4aa; }
+    .btn-secondary:hover { background: #00d4aa; color: #1a1a2e; }
+    .status { font-size: 11px; text-align: center; min-height: 16px; margin-top: 8px; }
+    .status-ok { color: #00d4aa; }
+    .status-err { color: #e74c3c; }
+    .info { color: #666; font-size: 11px; text-align: center; margin-top: 10px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <h2>CricketArb</h2>
+
+  <div class="section">
+    <label>JWT Token (from login)</label>
+    <input type="text" id="token" placeholder="Paste your JWT token here" />
+  </div>
+
+  <button class="btn-primary" id="save-token">Save Token</button>
+  <button class="btn-secondary" id="open-panel">Open Capture Panel on Page</button>
+
+  <div class="status" id="status"></div>
+
+  <div class="section" style="margin-top: 6px;">
+    <label>Auto-Capture Status</label>
+    <div id="auto-status" style="font-size: 11px; color: #666; padding: 4px 0;">Not active</div>
+  </div>
+
+  <div class="info">
+    1. Login at localhost:5173<br/>
+    2. Copy token from DevTools → Application → localStorage → token<br/>
+    3. Paste above and save<br/>
+    4. Open any betting site → click "Open Capture Panel"<br/>
+    5. Set Team A, Team B → click <strong style="color:#00d4aa">Auto</strong> for live capture
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

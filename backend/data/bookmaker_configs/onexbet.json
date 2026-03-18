@@ -1,0 +1,20 @@
+{
+  "name": "1xbet",
+  "display_name": "1xBet",
+  "type": "bookmaker",
+  "base_url": "https://1xbet.com",
+  "cricket_path": "/en/line/cricket",
+  "odds_format": "decimal",
+  "commission_pct": 0,
+  "scrape_interval_seconds": 30,
+  "selectors": {
+    "event_item": ".c-events__item, .dashboard-game, [class*='game-item']",
+    "participant_name": ".c-events__team, [class*='team']",
+    "odds_value": ".c-events__coef, [class*='coef']"
+  },
+  "anti_detect": {
+    "min_delay_ms": 2000,
+    "max_delay_ms": 6000,
+    "max_requests_per_session": 40
+  }
+}

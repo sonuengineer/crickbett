@@ -1,0 +1,21 @@
+{
+  "name": "bet365",
+  "display_name": "Bet365",
+  "type": "bookmaker",
+  "base_url": "https://www.bet365.com",
+  "cricket_path": "#/AC/B3/C20604979/D50/E2/F50/",
+  "odds_format": "fractional",
+  "commission_pct": 0,
+  "scrape_interval_seconds": 30,
+  "selectors": {
+    "fixture_container": "[class*='Fixture'], .sl-MarketCouponFixture",
+    "participant_name": "[class*='Participant'], .sl-MarketCouponFixture__participant",
+    "odds_value": "[class*='Odds'], .sl-MarketCouponFixture__odds",
+    "live_indicator": "[class*='InPlay'], .sl-MarketCouponFixture__inplay"
+  },
+  "anti_detect": {
+    "min_delay_ms": 3000,
+    "max_delay_ms": 8000,
+    "max_requests_per_session": 30
+  }
+}

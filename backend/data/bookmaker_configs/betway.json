@@ -1,0 +1,20 @@
+{
+  "name": "betway",
+  "display_name": "Betway",
+  "type": "bookmaker",
+  "base_url": "https://www.betway.com",
+  "cricket_path": "/en/sports/grp/cricket",
+  "odds_format": "decimal",
+  "commission_pct": 0,
+  "scrape_interval_seconds": 30,
+  "selectors": {
+    "event_card": "[class*='eventCard'], [class*='match-row'], [data-testid*='event']",
+    "participant_name": "[class*='participant'], [class*='team']",
+    "odds_value": "[class*='price'], [class*='odds']"
+  },
+  "anti_detect": {
+    "min_delay_ms": 2000,
+    "max_delay_ms": 6000,
+    "max_requests_per_session": 40
+  }
+}

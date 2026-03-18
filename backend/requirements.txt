@@ -1,0 +1,37 @@
+# Web Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# Database
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.1
+
+# Settings
+pydantic[email]==2.10.4
+pydantic-settings==2.7.1
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Redis
+redis[hiredis]==5.2.1
+
+# Task Queue
+celery[redis]==5.4.0
+
+# HTTP Client
+httpx==0.28.1
+
+# Scraping
+playwright==1.49.0
+
+# Telegram
+python-telegram-bot==21.9
+
+# Utilities
+python-multipart==0.0.18
+python-dateutil==2.9.0
+pytz==2024.2
+logzero==1.7.0

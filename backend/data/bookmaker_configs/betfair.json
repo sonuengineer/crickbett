@@ -1,0 +1,23 @@
+{
+  "name": "betfair",
+  "display_name": "Betfair Exchange",
+  "type": "exchange",
+  "base_url": "https://www.betfair.com",
+  "cricket_path": "/exchange/plus/cricket",
+  "odds_format": "decimal",
+  "commission_pct": 5.0,
+  "scrape_interval_seconds": 20,
+  "selectors": {
+    "event_list": ".event-list, .coupon-content",
+    "event_item": ".event-info, .event-header, [data-eventid]",
+    "runner_line": ".runner-line, [data-runner-name]",
+    "runner_name": ".runner-name, .selection-name",
+    "back_price": ".bet-button-price.back-selection-button, .back .odds",
+    "lay_price": ".bet-button-price.lay-selection-button, .lay .odds"
+  },
+  "anti_detect": {
+    "min_delay_ms": 2000,
+    "max_delay_ms": 5000,
+    "max_requests_per_session": 50
+  }
+}

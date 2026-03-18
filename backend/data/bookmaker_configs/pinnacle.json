@@ -1,0 +1,20 @@
+{
+  "name": "pinnacle",
+  "display_name": "Pinnacle",
+  "type": "bookmaker",
+  "base_url": "https://www.pinnacle.com",
+  "cricket_path": "/en/cricket/matchups/",
+  "odds_format": "decimal",
+  "commission_pct": 0,
+  "scrape_interval_seconds": 25,
+  "selectors": {
+    "matchup_row": "[class*='matchup'], [class*='event-row'], .style_row",
+    "participant_name": "[class*='participant'], [class*='team-name']",
+    "odds_value": "[class*='price'], [class*='odds']"
+  },
+  "anti_detect": {
+    "min_delay_ms": 2000,
+    "max_delay_ms": 5000,
+    "max_requests_per_session": 60
+  }
+}
