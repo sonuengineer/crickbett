@@ -1033,3 +1033,46 @@ Here's exactly what happens during a real live match:
    ```
 2. Calibrate CSS selectors in `data/bookmaker_configs/*.json`
 3. Restart Celery worker
+
+
+
+
+###env
+# Database
+DATABASE_URL=postgresql+asyncpg://cricket_arb:cricket_arb_secret@localhost:5433/cricket_arb
+
+# Redis
+REDIS_URL=redis://localhost:6380/0
+
+# JWT
+JWT_SECRET_KEY=dev-cricket-arb-secret-change-in-production
+JWT_ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+REFRESH_TOKEN_EXPIRE_DAYS=7
+
+# Data Source Mode: "demo" (mock data), "api" (The Odds API), "playwright" (browser scraping)
+DATA_SOURCE_MODE=demo
+
+# The Odds API (free tier: 500 requests/month)
+# Sign up at: https://the-odds-api.com/#get-access
+THE_ODDS_API_KEY=
+ODDS_API_REGIONS=uk,eu,au
+
+# Cricket Arbitrage
+SCRAPE_INTERVAL_SECONDS=30
+MATCH_DISCOVERY_INTERVAL_SECONDS=300
+MIN_ARB_PROFIT_PCT=0.5
+MAX_ODDS_AGE_SECONDS=120
+PROXY_LIST=
+BETFAIR_COMMISSION_PCT=5.0
+DEFAULT_ARB_STAKE=1000.0
+ODDS_CLEANUP_HOURS=24
+
+# Telegram
+TELEGRAM_BOT_TOKEN=
+
+# Server
+HOST=0.0.0.0
+PORT=8000
+DEBUG=true
+CORS_ORIGINS=http://localhost:5173,http://localhost:3000
